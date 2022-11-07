@@ -15,8 +15,8 @@ class Portfolio extends StatefulWidget {
 }
 
 class _PortfolioState extends State<Portfolio> {
-  late final List<Map> intrests;
-  late final GlobalKey intrestsKey;
+  late final List<Map> interest;
+  late final GlobalKey interestKey;
   late final GlobalKey skillsKey;
   late final GlobalKey homeKey;
   late final ScrollController scrollController;
@@ -24,52 +24,42 @@ class _PortfolioState extends State<Portfolio> {
 
   @override
   void initState() {
-    intrestsKey = GlobalKey();
+    interestKey = GlobalKey();
     skillsKey = GlobalKey();
     homeKey = GlobalKey();
     scrollController = ScrollController();
     showFloatingButton = false.obs;
 
-    intrests = [
+    interest = [
       {
-        'intrest': 'Beatbox',
+        'interest': 'coding',
         'color': CustomColors.primary,
-        'textColor': CustomColors.darkBackground,
+        'textColor': CustomColors.brightBackground,
       },
       {
-        'intrest': 'Chess',
-        'color': CustomColors.brightBackground,
-        'textColor': CustomColors.primary,
-      },
-      {
-        'intrest': 'Soccer',
+        'interest': 'digital art',
         'color': CustomColors.primary,
-        'textColor': CustomColors.darkBackground,
+        'textColor': CustomColors.brightBackground,
       },
       {
-        'intrest': 'Listening to music',
-        'color': CustomColors.brightBackground,
-        'textColor': CustomColors.primary,
-      },
-      {
-        'intrest': 'Watching movies',
-        'color': CustomColors.brightBackground,
-        'textColor': CustomColors.primary,
-      },
-      {
-        'intrest': 'Math',
+        'interest': 'gaming',
         'color': CustomColors.primary,
-        'textColor': CustomColors.darkBackground,
+        'textColor': CustomColors.brightBackground,
       },
       {
-        'intrest': 'Learning English',
-        'color': CustomColors.brightBackground,
-        'textColor': CustomColors.primary,
-      },
-      {
-        'intrest': 'Solving Problems',
+        'interest': 'chess',
         'color': CustomColors.primary,
-        'textColor': CustomColors.darkBackground,
+        'textColor': CustomColors.brightBackground,
+      },
+      {
+        'interest': 'scrabble',
+        'color': CustomColors.primary,
+        'textColor': CustomColors.brightBackground,
+      },
+      {
+        'interest': 'Solving Problems',
+        'color': CustomColors.primary,
+        'textColor': CustomColors.brightBackground,
       },
     ];
 
@@ -114,21 +104,24 @@ class _PortfolioState extends State<Portfolio> {
                   UpperContainer(width: width),
                   LowerContainer(
                       width: width,
-                      intrests: intrests,
-                      intrestsKey: intrestsKey,
+                      interest: interest,
+                      interestKey: interestKey,
                       skillsKey: skillsKey),
                   Container(
                     width: width,
                     height: 0.1,
-                    color:CustomColors.gray,
+                    color: CustomColors.gray,
                   ),
-                  Footer(width: width,scrollController: scrollController,),
+                  Footer(
+                    width: width,
+                    scrollController: scrollController,
+                  ),
                 ],
               ),
               NavBar(
                 width: width,
                 skillsKey: skillsKey,
-                intrestsKey: intrestsKey,
+                interestKey: interestKey,
                 key: homeKey,
                 scrollController: scrollController,
               ),

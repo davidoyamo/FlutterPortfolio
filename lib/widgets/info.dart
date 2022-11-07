@@ -5,7 +5,8 @@ import 'package:portfolio/utils/custom_colors.dart';
 class Info extends StatelessWidget {
   final double width;
   final double ratio;
-  const Info({required this.width,required this.ratio ,Key? key}) : super(key: key);
+  const Info({required this.width, required this.ratio, Key? key})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,18 +16,19 @@ class Info extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-              '• I’m studying informatics engineering at the University Of Aleppo.',
+              '• I graduated recently with a bsc in IT, and currently on the hunt for a job to put my skills to the test   ',
               style: GoogleFonts.getFont('Delius',
-                  color: CustomColors.gray, fontSize: 13)),
-          const SizedBox(height: 20),
-          Text('• The Only thing that makes me feel happy is coding.',
-              style: GoogleFonts.getFont('Delius',
-                  color: CustomColors.gray, fontSize: 13)),
+                  color: CustomColors.gray, fontSize: 15)),
           const SizedBox(height: 20),
           Text(
-              '• I always try to discover the new and the best technologies and use them to make my client feel comfortable and satisfied. ',
+              '• Apart from android app development and web design i learn about Graphic design in my free time which eventually led to my hand in digital art',
               style: GoogleFonts.getFont('Delius',
-                  color: CustomColors.gray, fontSize: 13)),
+                  color: CustomColors.gray, fontSize: 15)),
+          const SizedBox(height: 20),
+          Text(
+              '• I am conversant with design tools such as figma, adobe xd, adobe photoshop and adobe illustrator',
+              style: GoogleFonts.getFont('Delius',
+                  color: CustomColors.gray, fontSize: 15)),
         ],
       ),
     );

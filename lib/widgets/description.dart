@@ -7,8 +7,7 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 class Description extends StatelessWidget {
   final bool isVertical;
   final double width;
-  const Description(
-      {required this.isVertical, required this.width, Key? key})
+  const Description({required this.isVertical, required this.width, Key? key})
       : super(key: key);
 
   @override
@@ -30,34 +29,32 @@ class Description extends StatelessWidget {
                       style: GoogleFonts.getFont('Days One',
                           color: Colors.black, fontSize: 10)))),
           SizedBox(height: 0.015 * width),
-          Text('Talk is cheap.',
+          Text('DAVID OYAMO.',
               style: GoogleFonts.getFont('Delius',
                   color: Colors.white, fontSize: 30)),
           const SizedBox(height: 5),
-          Text('Show me the code.',
+          Text('Portfolio.',
               style: GoogleFonts.getFont('Delius',
-                  color: Colors.white, fontSize: 30)),
+                  color: Colors.white, fontSize: 20)),
           const SizedBox(height: 20),
           SizedBox(
             width: isVertical ? double.infinity : width * 0.29,
             height: 90,
             child: AnimatedTextKit(
               repeatForever: true,
-              pause: const Duration(seconds: 2),
+              pause: const Duration(seconds: 30),
               animatedTexts: [
                 TyperAnimatedText(
-                    "I'm developing mobile,frontend and backend applications",
+                    "flutter developer|digital artist|cloud enthusiast",
                     textAlign: isVertical ? TextAlign.center : TextAlign.start,
                     textStyle: GoogleFonts.getFont('Delius',
-                        color: CustomColors.gray,
-                        fontSize: 15)),
+                        color: CustomColors.gray, fontSize: 15)),
               ],
             ),
           ),
           InkWell(
-            onTap: () async => !await launch(
-                'https://mail.google.com/mail/u/0/?fs=1&to=khalidlionel.2089@gmail.com&tf=cm'),
-            child: Text("Let's chat",
+            onTap: () async => !await launch('https://twitter.com/david_oyamo'),
+            child: Text("Connect",
                 style: GoogleFonts.getFont('Delius',
                     decoration: TextDecoration.underline,
                     color: CustomColors.primary,
